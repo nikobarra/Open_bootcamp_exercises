@@ -15,13 +15,7 @@
 </head>
 <body>
 
-    <nav>
-        <ul>
-            <li> <a href="">Herencia</a></li>
-            <li> <a href="">otra</a></li>
-            <li> <a href="">ejemplo</a></li>
-        </ul>
-    </nav>
+{% include 'layout/partials/menu.html' %} 
 
     <main>
         
@@ -29,9 +23,7 @@
         {% endblock %}
     </main>
 
-    <footer>
-        pagina test!
-    </footer>
+{% include 'layout/partials/footer.html' %} 
     
     {% block scripts %}
     {% endblock %}

@@ -15,7 +15,7 @@ def queries(request):
     #busqueda con limites por ejemplo 10 primeros registros
     limits = Author.objects.all()[:10]
     
-    #busqueda con offset (comenzar desde un punto especifico)
+    #busqueda con offset (comenzar desde/hasta un punto especifico slicing)
     offsets = Author.objects.all()[5:10]
     
     return render(request, 'post/queries.html',{'authors':authors, 'filtered':filtered, 'author':author, 'limits':limits, 'offsets':offsets})

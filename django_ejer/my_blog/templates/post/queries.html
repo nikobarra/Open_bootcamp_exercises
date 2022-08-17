@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>filtrando desde el 5to elemento hasta el 10</h1>
+    <ol>
+        {% for offset in offsets %}
+            <li>{{ offset.id }}---{{ offset }}</li>
+        {% endfor %}
+    </ol>
+
+    <h1>Primeros 10 items</h1>
+    <ol>
+        {% for limit in limits %}
+            <li>{{ limit }}</li>
+        {% endfor %}
+    </ol>
+
+    <h2>Obterniendo un unico objeto</h2>
+
+    <h4>{{ author }}</h4>
+
+    <h2>Autor buscado</h2>
+    <ul>
+      {% for element in filtered %}
+      <li>{{ element.name }} ({{element.email}})</li>
+      {% endfor %}
+    </ul>
+
+    <h1>Todos los autores</h1>
+    <ul>
+      {% for author in authors %}
+      <li>{{ author.name }} ({{author.email}})</li>
+      {% endfor %}
+    </ul>
+    <h3>Total de autores: {{ authors|length }}</h3>
+  </body>
+</html>

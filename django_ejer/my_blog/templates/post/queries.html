@@ -39,5 +39,32 @@
       {% endfor %}
     </ul>
     <h3>Total de autores: {{ authors|length }}</h3>
+
+    <p>********************************************************</p>
+
+    <h1>Todos los autores ordenados por mail </h1>
+    <ul>
+      {% for order in orders %}
+      <li>{{order.email}}</li>
+      {% endfor %}
+    </ul>
+    <p>********************************************************</p>
+
+    <h1>Todos los elementos menores o iguales a id 15 </h1>
+    <ol>
+      {% for filter_2 in filtered_2 %}
+      <li> {{filter_2.id}} - {{filter_2.email}}</li>
+      {% endfor %}
+    </ol>
+
+
+    <p>********************************************************</p>
+
+    <h1>Todos los elementos que contengan  </h1>
+    <ol>
+      {% for filter_3 in filtered_3 %}
+      <li> {{filter_3.name}} - {{filter_3.email}}</li>
+      {% endfor %}
+    </ol>
   </body>
 </html>

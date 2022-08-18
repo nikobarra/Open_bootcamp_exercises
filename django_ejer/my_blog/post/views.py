@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Author, Entry
 
@@ -42,3 +43,10 @@ def queries(request):
     
     return render(request, 'post/queries.html',{'authors':authors, 'filtered':filtered, 'author':author, 'limits':limits, 'offsets':offsets, 'orders':orders, 'filtered_2':filtered_2, 'filtered_3':filtered_3})
 
+
+def update(request):
+    author = Author.objects.get(id=1)
+    author.name = 'niko'
+    author.email = 'niko@niko.com'
+    author.save()
+    return HttpResponse('modificado')   

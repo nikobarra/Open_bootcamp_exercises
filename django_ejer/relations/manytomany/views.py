@@ -33,6 +33,7 @@ def create(request):
     art3.publications.add(pub6, pub7) """
     
     #resultado = art1.publications.all()
+    # art1.publications.remove(pub1)
     pub1 = Publication.objects.get(id=1)
     resultado = pub1.article_set.all()
     return HttpResponse(resultado)

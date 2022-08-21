@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .forms import CommentForm
 
 def form(request):
-    comment_form =CommentForm()
+    comment_form =CommentForm({'name':'Juan', 'url':'http://www.google.com', 'comment':'Hola mundo'})
     return render(request, 'form.html', {'form': comment_form})
 
 

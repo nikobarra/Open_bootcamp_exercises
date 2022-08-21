@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>form</h1>
-    <hr>
-    
-</body>
-</html>
+<form action ='{% url 'goal' %}' method='GET'>
+    <h3> formulario de contacto </h3>
+    <label>Nombre: </label>
+    <input type='text' name='nombre' placeholder='escribe tu nombre'/>
+    <label>Email: </label>
+    <input type='text' name='email' placeholder='escribe tu email'/>
+    <input type='submit' value='Enviar'/>
+</form>

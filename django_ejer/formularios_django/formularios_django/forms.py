@@ -13,8 +13,9 @@ class ContactForm(forms.Form):
     
     #validacion de formulario con metodo clean 
     def clean_name(self):
-        name = self.cleaned_data['name']
-        if name == 'Juan':
+        name = (self.cleaned_data['name']).upper()
+        
+        if name == 'JUAN':
             raise forms.ValidationError('No puede ser Juan')
         return name
     
